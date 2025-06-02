@@ -34,7 +34,31 @@ public class CardTrick {
             c.setSuit(suits[rand.nextInt(suits.length)]);
             magicHand[i] = c;
         }
+        // hardcoded luckyCard
+            Card luckyCard = new Card();
+            luckyCard.setValue(5);
+            luckyCard.setSuit("Hearts");
+
+            boolean found = false;
+
+        
+            for (Card c : magicHand) {
+                if (c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())) {
+                    found = true;
+                    break;
+    }
+}
+            
+        if (found) {
+            System.out.println("\nCongratulations! You win! ");
+        } else {
+            System.out.println("\nSorry! Better luck next time.");
+        }
+
         
     }
 }
+      
+
+        
       
